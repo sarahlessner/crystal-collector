@@ -1,0 +1,21 @@
+body {
+	margin: 15px;
+	background-color: #c9e7f3;
+	font-family: 'Walter Turncoat', cursive;
+
+}
+
+h1 {
+	font-family: 'Slackey', cursive;
+	font-size: 50px;
+	color: #3ab2e0;
+}
+
+p {
+	color: #307d9b;
+	font-size: 20px;
+}
+
+.crystal-image {
+	width: 200px;
+}
