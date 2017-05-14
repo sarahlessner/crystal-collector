@@ -5,47 +5,71 @@
   <title>Crystal Collector</title>
 
   <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Slackey|Walter+Turncoat" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Slackey|Walter+Turncoat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100" rel="stylesheet">
 
 
 </head>
 <body>
+<header>
+		<h1><img width="80" src="assets/images/crystal1.png"> Crystal Collector <img width="80" src="assets/images/crystal2.png"></h1>
+		
+</header>
 
-<h1><img width="100" src="assets/images/crystal1.png"> Crystal Collector <img width="100" src="assets/images/crystal2.png"></h1>
 
-<div id="instructions">
+	<div class="container">
+		<div class="row">
 
-	<p>You will be given a random number at the start of the game.</p>
+			<div class="col-md-3">
+				
+				<div class="instructions">
 
-	<p>Clicking on one of the four crystals below adds a specific amount of points to your total score.</p>
+					<h2>Instructions</h2>
+				
+					<p>Click on one of the four crystals to add points to your "Game Total".</p>
 
-	<p>The value of each crystal is hidden from you until you click on it.</p>
+					<p>The value of each crystal changes every game.</p>
 
-	<p>Each time when the game starts, the game will change the values of each crystal.</p>
+					<p>You win the game by matching your "Game Total" to the "Random Number".</p>
 
-	<p>You win the game by matching your total score to random number.</p>
+					<p>You lose the game if your "Game Total" goes above the "Random Number".</p>
 
-	<p>You lose the game if your total score goes above the random number.</p>
+	   			</div>
+				
+			</div>
 
-</div>
+			<div class="col-md-8 col-md-offset-1">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-5">
+							<h2>Random Number:  <span id="number-to-guess"></span></h2>
+							<h2>Game Total: <span id="total-score"></span></h2>
+						</div>
+						
+						<div class="col-md-7 pull-left" id="game-stats">
+							<h2>Game Wins: <span  id="wins"></span></h2>
+							<h2>Game Losses: <span id="losses"></span></h2>
+						</div>
+					</div>
+				</div>
+				<p id="win-loss-stat"></p>
+				<div id="crystals"></div>
+			
+			</div>
 
-<h2>Number to Guess:  <span id="number-to-guess"></span></h2>
+			
+		</div>	
+		
+	</div>
 
-<div id="game-stats">
-	<p id="win-loss-stat"></p>
-	<p>Wins: <span  id="wins"></span></p>
-	<p>Losses: <span id="losses"></span></p>
-</div>
 
-<h2>Your total score is: <span id="total-score"></span></h2>
-
-<div id="crystals">
-</div>
 
 <script src="assets/javascript/game.js"></script>
 </body>

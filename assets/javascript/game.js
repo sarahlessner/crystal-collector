@@ -13,8 +13,8 @@ for (i = 0; i < crystalImgArray.length; i++) {
 	crystalImg.addClass("crystal-image");
 	crystalImg.attr("src", crystalImgArray[i]);
 	crystalImg.attr("data-crystalvalue", Math.round(Math.random()* 12) + 1);
-	var myID = "crystalName" + i;
-	crystalImg.attr("id", myID);
+	var myCrystals = "crystalName" + i;
+	crystalImg.attr("id", myCrystals);
 	$("#crystals").append(crystalImg);
 
 };
@@ -28,14 +28,15 @@ function initRound() {
 	userTotal = 0;
 	$("#total-score").text(userTotal);
 
-	//var crystalImages = $(".crystal-image");
 	for (i = 0; i < crystalImgArray.length; i++) {
-		var myID = "#crystalName" + i;
-		$(myID).attr("data-crystalvalue", Math.round(Math.random()* 12) + 1);;	
+		var myCrystals = "#crystalName" + i;
+		$(myCrystals).attr("data-crystalvalue", Math.round(Math.random()* 12) + 1);;	
 	}
 };
 
 $(".crystal-image").on("click", function() {
+
+	$("#win-loss-stat").text("");
 
 	var crystalValue = ($(this).attr("data-crystalvalue"));
     crystalValue = parseInt(crystalValue);
@@ -60,16 +61,6 @@ $(".crystal-image").on("click", function() {
 });
 
 
-
-
-
-//create click function for crystals that adds the current random number
-// assigned to the crystal to the tally of user guesses
-
-//if the variable storing the user guess tally is equal to the random number to match
-// the user wins. if the variable... is greater then the user loses
-	// change set variable for win/loss message to true or false for each of those conditions
-	//along with that update either the win or loss tally - insert into HTML w juery
 
 
 

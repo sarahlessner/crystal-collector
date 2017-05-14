@@ -1,21 +1,57 @@
 body {
 	margin: 15px;
 	background-color: #c9e7f3;
-	font-family: 'Walter Turncoat', cursive;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 28px;
+	color: #307d9b;
 
+}
+
+.navbar {
+	background-color: #d4dbdd;
 }
 
 h1 {
 	font-family: 'Slackey', cursive;
 	font-size: 50px;
 	color: #3ab2e0;
+	text-align:center;
 }
 
 p {
-	color: #307d9b;
+	color: black;
 	font-size: 20px;
 }
 
-.crystal-image {
+.container {
+	margin: 0;
+}
+
+.instructions {
+	text-align: justify;
+	border: 1px dashed white;
+	padding-left: 5px;
+	
+}
+
+#crystals {
+	position: absolute;
+	top: 220px;
+}
+
+#crystalName1,
+#crystalName3 {
 	width: 200px;
 }
+
+#crystalName0,
+#crystalName2 {
+	width: 170px;
+}
+
+#win-loss-stat {
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+
