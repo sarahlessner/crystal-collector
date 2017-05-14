@@ -7,31 +7,59 @@ var losses = 0;
 var guessNumber = 0;
 var userTotal = 0;
 
+
+for (i = 0; i < crystalImgArray.length; i++) {
+	var crystalImg = $("<img>");
+	crystalImg.addClass("crystal-image");
+	crystalImg.attr("src", crystalImgArray[i]);
+	crystalImg.attr("data-crystalvalue", Math.round(Math.random()* 12) + 1);
+	var myID = "crystalName" + i;
+	crystalImg.attr("id", myID);
+	$("#crystals").append(crystalImg);
+
+};
+
 initRound();
 
 function initRound() {
 	
-	var guessNumber = Math.round(Math.random() * 101) + 19;
-	$("#number-to-guess").text(guessNumber);
-	
+	guessNumber = Math.round(Math.random() * 101) + 19;
+	$("#number-to-guess").text(guessNumber);	
+	userTotal = 0;
+	$("#total-score").text(userTotal);
+
+	//var crystalImages = $(".crystal-image");
 	for (i = 0; i < crystalImgArray.length; i++) {
-		var crystalImg = $("<img>");
-		crystalImg.addClass("crystal-image");
-		crystalImg.attr("src", crystalImgArray[i]);
-		crystalImg.attr("data-crystalvalue", Math.round(Math.random()* 12) + 1);
-		$("#crystals").append(crystalImg);
-
-	};
-
+		var myID = "#crystalName" + i;
+		$(myID).attr("data-crystalvalue", Math.round(Math.random()* 12) + 1);;	
+	}
 };
 
 $(".crystal-image").on("click", function() {
+
 	var crystalValue = ($(this).attr("data-crystalvalue"));
     crystalValue = parseInt(crystalValue);
     userTotal += crystalValue;
     $("#total-score").text(userTotal);
 
+    	
+    if (userTotal === guessNumber) {
+    	$("#win-loss-stat").text("You Win!");
+    	wins ++;
+    	$("#wins").text(wins);
+    	initRound();
+    }
+
+    else if (userTotal >= guessNumber) {
+    	$("#win-loss-stat").text("You Lose!");
+    	losses++;
+    	$("#losses").text(losses);
+    	initRound();
+    }
+
 });
+
+
 
 
 
