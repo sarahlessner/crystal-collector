@@ -30,16 +30,26 @@ p {
 .instructions {
 	text-align: justify;
 	border: 1px dashed white;
-	padding-left: 5px;
+	padding: 5px;
 	
 }
 
 #crystals {
 	position: absolute;
 	top: 220px;
+
+
 }
 
-#crystalName1,
+.crystal-image {
+	width: 150px;
+}
+
+.crystal-image:hover {
+	opacity: 0.5;
+}
+
+/*#crystalName1,
 #crystalName3 {
 	width: 200px;
 }
@@ -47,7 +57,7 @@ p {
 #crystalName0,
 #crystalName2 {
 	width: 170px;
-}
+}*/
 
 #win-loss-stat {
 	text-align: center;
