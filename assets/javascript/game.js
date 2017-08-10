@@ -26,8 +26,7 @@ function initRound() {
 
 	};
 
-	$(".crystal-image").on("click", clickCrystal);
-	
+	$(".crystal-image").on("click", clickCrystal);	
 };
 
 
