@@ -4,7 +4,6 @@ body {
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 28px;
 	color: #307d9b;
-
 }
 
 .navbar {
@@ -31,14 +30,11 @@ p {
 	text-align: justify;
 	border: 1px dashed white;
 	padding: 5px;
-	
 }
 
 #crystals {
 	position: absolute;
 	top: 220px;
-
-
 }
 
 .crystal-image {
@@ -49,19 +45,8 @@ p {
 	opacity: 0.5;
 }
 
-/*#crystalName1,
-#crystalName3 {
-	width: 200px;
-}
-
-#crystalName0,
-#crystalName2 {
-	width: 170px;
-}*/
-
 #win-loss-stat {
 	text-align: center;
 	font-size: 40px;
 	font-weight: bold;
 }
-
